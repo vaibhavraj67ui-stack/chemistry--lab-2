@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102a43">
+  <meta name="description" content="Class 12 Chemistry Lab - Hindi/Hinglish revision, formulas, reactions and MCQ practice.">
+  <title>Chemistry Lab | Class 12</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><div class="logo">⚗️</div><div><strong>Chemistry Lab</strong><small>Class 12 · UP Board · Hindi + Hinglish</small></div></div>
+    <button id="installBtn" class="install-btn" hidden>Install App</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">YOUR EXAM REVISION SPACE</p>
+      <h1>Chemistry ko <span>easy</span> banate hain.</h1>
+      <p>Quick notes, important formulas, organic reactions aur MCQ practice — ek hi jagah.</p>
+      <div class="hero-actions">
+        <button class="primary" data-go="notes">📘 Notes kholo</button>
+        <button class="secondary" data-go="quiz">🧠 MCQ practice</button>
+      </div>
+      <div id="connection" class="connection">App ready</div>
+    </section>
+
+    <nav class="tabs" aria-label="Main navigation">
+      <button class="tab active" data-tab="home">🏠 Home</button>
+      <button class="tab" data-tab="notes">📘 Notes</button>
+      <button class="tab" data-tab="formulas">📐 Formulas</button>
+      <button class="tab" data-tab="reactions">🧪 Reactions</button>
+      <button class="tab" data-tab="quiz">✅ MCQ Test</button>
+    </nav>
+
+    <section id="home" class="page active">
+      <div class="section-heading"><div><p class="eyebrow">START HERE</p><h2>Study dashboard</h2></div><span class="pill">Offline-ready</span></div>
+      <div class="cards">
+        <button class="feature-card" data-go="notes"><span class="feature-icon">📘</span><strong>Chapter Notes</strong><small>Definitions + important points</small><span class="card-link">Open notes →</span></button>
+        <button class="feature-card" data-go="formulas"><span class="feature-icon">📐</span><strong>Formula Bank</strong><small>Numericals ke kaam ke formulas</small><span class="card-link">Revise formulas →</span></button>
+        <button class="feature-card" data-go="reactions"><span class="feature-icon">🧬</span><strong>Organic Reactions</strong><small>Named reactions & examples</small><span class="card-link">Revise reactions →</span></button>
+        <button class="feature-card" data-go="quiz"><span class="feature-icon">🎯</span><strong>Quick MCQ Test</strong><small>Answers ke saath practice</small><span class="card-link">Start test →</span></button>
+      </div>
+      <div class="tip"><strong>💡 Study tip</strong><p>Pehle notes revise karo, phir formulas dekho, aur end mein MCQ test do. Galat answer ko dobara padhna sabse useful revision hai.</p></div>
+    </section>
+
+    <section id="notes" class="page">
+      <div class="section-heading"><div><p class="eyebrow">REVISION LIBRARY</p><h2>Chapter Notes</h2></div></div>
+      <label class="search-label" for="noteSearch">Chapter ya topic search karo</label>
+      <input id="noteSearch" class="search" placeholder="e.g. विलयन, अभिक्रिया की दर..." autocomplete="off">
+      <div id="notesList" class="stack"></div>
+    </section>
+
+    <section id="formulas" class="page">
+      <div class="section-heading"><div><p class="eyebrow">NUMERICALS QUICK HELP</p><h2>Formula Bank</h2></div></div>
+      <div class="formula-list">
+        <article class="formula"><h3>विलयन (Solutions)</h3><p class="equation">M = n / V(L)</p><p>M = molarity, n = solute ke moles, V = solution ka volume in litre.</p><p class="equation">m = n / mass of solvent (kg)</p><p>Molality mein solvent ka mass kg mein hota hai.</p><p class="equation">p = x × p°</p><p>Raoult's law: volatile component ka partial vapour pressure.</p></article>
+        <article class="formula"><h3>विद्युत रसायन (Electrochemistry)</h3><p class="equation">E°cell = E°cathode − E°anode</p><p class="equation">ΔG° = −nFE°cell</p><p class="equation">log K = nE°cell / 0.0591 (at 298 K)</p><p>Last formula 298 K par Nernst relation se.</p></article>
+        <article class="formula"><h3>रासायनिक बलगतिकी (Chemical Kinetics)</h3><p class="equation">Rate = −Δ[R] / Δt</p><p class="equation">k = (2.303/t) log(a/(a−x))</p><p>First-order reaction ke liye half-life: <span class="equation">t½ = 0.693/k</span></p></article>
+        <article class="formula"><h3>Colligative properties</h3><p class="equation">ΔTb = Kb × m</p><p class="equation">ΔTf = Kf × m</p><p class="equation">π = CRT</p><p>Dilute solution ke liye osmotic pressure formula.</p></article>
+        <article class="formula"><h3>Quick unit reminder</h3><p>Temperature difference: K; volume in molarity: L; molality: mol kg⁻¹; Faraday constant F ≈ 96500 C mol⁻¹.</p></article>
+      </div>
+    </section>
+
+    <section id="reactions" class="page">
+      <div class="section-heading"><div><p class="eyebrow">ORGANIC QUICK REVISION</p><h2>Important Reactions</h2></div></div>
+      <div class="stack">
+        <article class="note-card"><h3>1. Williamson ether synthesis</h3><p>R–ONa + R′–X → R–O–R′ + NaX</p><p>Alkoxide aur primary alkyl halide se ether banaya ja sakta hai.</p></article>
+        <article class="note-card"><h3>2. Aldol condensation</h3><p>α-hydrogen wale aldehyde/ketone dilute base mein β-hydroxy carbonyl compound bana sakte hain; heating par dehydration hoti hai.</p></article>
+        <article class="note-card"><h3>3. Cannizzaro reaction</h3><p>α-hydrogen na rakhne wale aldehydes concentrated alkali mein oxidation-reduction dete hain.</p></article>
+        <article class="note-card"><h3>4. Haloform reaction</h3><p>CH₃CO– group wale methyl ketones, I₂/NaOH ke saath yellow CHI₃ precipitate de sakte hain.</p></article>
+        <article class="note-card"><h3>5. Esterification</h3><p>Carboxylic acid + alcohol ⇌ ester + water (conc. H₂SO₄, heat).</p></article>
+        <article class="note-card"><h3>6. Reimer–Tiemann reaction</h3><p>Phenol + CHCl₃/NaOH, followed by acid work-up → mainly o-hydroxybenzaldehyde.</p></article>
+        <article class="note-card"><h3>7. Sandmeyer reaction</h3><p>Aryl diazonium salt se CuCl/CuBr/CuCN ki help se aryl halide/cyanide ban sakta hai.</p></article>
+        <article class="note-card"><h3>8. Hoffmann bromamide reaction</h3><p>Amide + Br₂/NaOH → primary amine with one carbon less.</p></article>
+      </div>
+      <p class="note-foot">Exam note: reaction ke saath reagent/condition aur product bhi yaad karo.</p>
+    </section>
+
+    <section id="quiz" class="page">
+      <div class="section-heading"><div><p class="eyebrow">PRACTICE MODE</p><h2>Quick MCQ Test</h2></div><span id="quizCount" class="pill">10 questions</span></div>
+      <div id="quizArea" class="quiz-box"></div>
+      <div class="quiz-actions"><button id="checkBtn" class="primary">Answer check karo</button><button id="nextBtn" class="secondary" hidden>Next question →</button><button id="restartBtn" class="secondary">Restart test</button></div>
+      <p id="quizFeedback" class="feedback" aria-live="polite"></p>
+      <div id="scoreBox" class="score-box" hidden></div>
+    </section>
+  </main>
+
+  <footer><span>⚗️ Chemistry Lab</span><span>Made for Class 12 revision</span></footer>
+  <script src="./app.js" defer></script>
+</body>
+</html>
